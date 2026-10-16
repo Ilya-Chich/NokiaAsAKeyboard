@@ -1,0 +1,19 @@
+# Phone build
+app/build/
+app/dist/
+app/.deps/
+
+# Go
+socket/kbd
+*.exe
+*.test
+*.out
+coverage.out
+
+.idea/
+
+*.log
+*.tmp
+*~
+.DS_Store
+.tasks

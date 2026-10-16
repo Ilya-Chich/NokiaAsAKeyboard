@@ -1,0 +1,8 @@
+# Let user USER open /dev/uinput without running the daemon as root.
+# The daemon must not be started with sudo.
+#
+#   sudo cp socket/udev/99-e70kbd.rules /etc/udev/rules.d/99-e70kbd.rules
+#   sudo udevadm control --reload-rules
+#   sudo udevadm trigger --name-match=uinput
+#
+KERNEL=="uinput", SUBSYSTEM=="misc", OWNER="USER", MODE="0660", TAG+="uaccess"
